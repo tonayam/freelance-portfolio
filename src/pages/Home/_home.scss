@@ -1,12 +1,66 @@
-// .home-page {}
+.home-page {
+    max-width: 2200px;
+    margin: 0 auto;
+    background-color: #fff;
+
+    header {
+        padding: 2rem 14px;
+
+        .img {
+            width: 100%;
+            @include flex(center, center, row);
+        }
+
+        .mini {
+            padding: 0 0.2rem;
+            font-size: 0.9rem;
+        }
+    }
+}
 
 
-@include for-phone-only {}
+@include for-phone-only {
+    .home-page {
+        header {
+            padding: 2rem 24px;
+        }
+    }
+}
 
-@include for-tablet-potrait-up {}
+@include for-tablet-potrait-up {
+    .home-page {
+        header {
+            padding: 2rem 48px;
+
+            .mini {
+                font-size: 1rem;
+            }
+        }
+    }
+}
 
 @include for-tablet-landscape-up {}
 
-@include for-desktop-up {}
+@include for-desktop-up {
+    .home-page {
+        header {
+            padding: 2rem 64px;
 
-@include for-big-desktop-up {}
+            .mini {
+                padding: 0 0.8rem;
+            }
+        }
+    }
+}
+
+@include for-big-desktop-up {
+    .home-page {
+        header {
+            padding: 2rem 64px;
+
+            .mini {
+                padding: 0 0.8rem;
+            }
+        }
+    }
+}

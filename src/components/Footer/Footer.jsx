@@ -2,12 +2,15 @@ import React from 'react';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { FaInstagram, FaBehance } from 'react-icons/fa';
 import { FiTwitter } from 'react-icons/fi';
+import letsCreate from '../../assets/lets-create.png';
 
 const Footer = () => {
   return (
     <footer className='footer'>
       <div className='top'>
-        <h1>Let's Create</h1>
+        <div className='img'>
+          <img src={letsCreate} alt="Let's Create" />
+        </div>
         <h2>UNLEASHING THE POTENTIAL OF YOUR BRAND</h2>
         <button className='white'>
           GET IN TOUCH <BsArrowUpRight />
