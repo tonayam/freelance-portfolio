@@ -1,0 +1,14 @@
+.home-page {
+    border: 2px solid red;
+}
+
+
+@include for-phone-only {}
+
+@include for-tablet-potrait-up {}
+
+@include for-tablet-landscape-up {}
+
+@include for-desktop-up {}
+
+@include for-big-desktop-up {}
