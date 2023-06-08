@@ -19,6 +19,17 @@
         left: 0;
         right: 0;
         padding: 2rem 1rem;
+        z-index: -10;
+        opacity: 0;
+        transition: 0.3s linear all;
+        transform: translateY(10px);
+
+        &.show {
+            z-index: 10;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
 
         ul {
             @include flex(flex-start, flex-start, column);
@@ -129,6 +140,9 @@
             margin: 0;
             padding: 0;
             background: transparent;
+            z-index: 1;
+            opacity: 1;
+            transform: translateY(0);
 
             ul {
                 @include flex(center, flex-start, row);
