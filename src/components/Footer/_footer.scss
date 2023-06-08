@@ -1,3 +1,125 @@
 .footer {
-    border: 2px solid green;
+    background-color: #111;
+    padding: 1rem 0;
+
+    .top {
+        margin: 2rem 0;
+        @include flex(center, center, column);
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0 14px;
+        margin-bottom: 3rem;
+
+        h1 {
+            font-size: clamp(1rem, 12vw, 11rem);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(1rem, 5vw, 2.5rem);
+            font-weight: 300;
+            width: 100%;
+            padding: 0 14px;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .line {
+        border-bottom: 0.5px solid rgba(255, 255, 255, .15);
+    }
+
+    .bottom {
+        padding: 2rem 14px;
+        @include grid(1, 1fr, 10px);
+        width: 100%;
+
+        .box {
+            // border: 2px solid blue;
+
+            .logo {
+                width: clamp(60px, 100px, 150px);
+                height: 50px;
+                border: 2px solid red;
+            }
+
+            .socials {
+                margin-top: 2rem;
+
+                .item {
+                    @include flex(center, flex-start, row);
+                    color: #fff;
+                    margin-bottom: 1rem;
+
+                    .icon {
+                        width: 34px;
+                        @include flex(center, center, row);
+                        height: 34px;
+                        background-color: #fff;
+                        color: #111;
+                        border-radius: 50%;
+                        margin-right: 1rem;
+                    }
+
+                    span {
+                        cursor: pointer;
+                    }
+
+                }
+
+            }
+        }
+    }
+
 }
+
+
+
+@include for-phone-only {
+    .footer {
+        .top {
+            padding: 0 24px;
+        }
+
+        .bottom {
+            padding: 2rem 24px;
+        }
+    }
+}
+
+@include for-tablet-potrait-up {
+    .footer {
+        .top {
+            padding: 0 48px;
+        }
+
+        .bottom {
+            padding: 2rem 48px;
+            @include grid(2, 1fr, 10px);
+        }
+    }
+}
+
+@include for-tablet-landscape-up {}
+
+@include for-desktop-up {
+    .footer {
+        padding: 1rem 0;
+
+        .top {
+            padding: 0 64px;
+
+            h2 {
+                width: 70%;
+            }
+        }
+
+        .bottom {
+            padding: 2rem 64px;
+            @include grid(4, 1fr, 10px);
+        }
+    }
+}
+
+@include for-big-desktop-up {}

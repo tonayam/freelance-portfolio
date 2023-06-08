@@ -81,6 +81,13 @@ button {
         -webkit-backdrop-filter: none;
         backdrop-filter: none;
     }
+
+    &.white {
+        color: #111;
+        background-color: #fff;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
 }
 
 
