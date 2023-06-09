@@ -18,6 +18,62 @@
         }
     }
 
+    // OUR SERVICES
+    .our-services {
+        margin-bottom: 3rem;
+        padding: 2rem 14px;
+        @include flex(flex-start, space-between, column);
+
+        .info {
+            width: 100%;
+
+            .title {
+                font-size: 2.2rem;
+                width: 70%;
+                font-weight: 500;
+                margin-bottom: 2rem;
+            }
+
+            .services {
+                @include grid(1, 1fr, 20px);
+
+                .service {
+                    border-top: 1px solid #7c7979;
+                    padding: 0.5rem 0;
+                    position: relative;
+                    height: 170px;
+                    margin-bottom: 2rem;
+
+                    h3 {
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        margin-bottom: 0.2rem;
+                    }
+
+                    p {
+                        color: rgba(17, 17, 17, .5);
+                        font-size: 0.9rem;
+                        margin-bottom: 0.5rem;
+                        line-height: 26px;
+                    }
+
+                    .circular-btn-with-label {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            }
+
+        }
+
+        .img {
+            border: 2px solid green;
+            height: 255px;
+            width: 100%;
+        }
+
+    }
+
     // SELECTED WORKS SECTION
     .selected-work {
         padding: 2rem 14px;
@@ -67,33 +123,10 @@
                     font-size: 1rem;
                     font-size: 400;
                 }
-
-                .btn {
-                    margin-top: 1rem;
-                    @include flex(center, flex-start, row);
-
-                    .icon {
-                        background-color: #111;
-                        border-radius: 50%;
-                        width: 34px;
-                        height: 34px;
-                        margin-right: 1rem;
-                        color: #fff;
-                        @include flex(center, center, row);
-                        font-size: 1rem;
-                        cursor: pointer;
-                    }
-
-                    span {
-                        font-size: 0.9rem;
-                    }
-                }
             }
-
         }
     }
 }
-
 
 @include for-phone-only {
     .home-page {
@@ -102,6 +135,12 @@
         header {
             padding: 2rem 24px;
         }
+
+        // OUR SERVICES
+        .our-services {
+            padding: 2rem 24px;
+        }
+
 
         // SELECTED WORKS SECTION
         .selected-work {
@@ -112,11 +151,42 @@
 
 @include for-tablet-potrait-up {
     .home-page {
+
+        // HEADER
         header {
             padding: 2rem 48px;
 
             .mini {
                 font-size: 1rem;
+            }
+        }
+
+        // OUR SERVICES
+        .our-services {
+            margin-bottom: 3rem;
+            padding: 2rem 48px;
+            @include flex(flex-start, space-between, column);
+
+            .info {
+                width: 100%;
+
+                .title {
+                    font-size: 3.2rem;
+                    width: 100%;
+                }
+
+                .services {
+                    @include grid(2, 1fr, 40px);
+
+                    .service {
+                        padding: 1rem 0;
+                    }
+                }
+            }
+
+            .img {
+                height: 672px;
+                width: 100%;
             }
         }
 
@@ -151,7 +221,7 @@
                         font-size: 0.9rem;
                     }
 
-                    .btn {
+                    .circular-btn-with-label {
                         margin-top: 1rem;
 
                         .icon {
@@ -178,6 +248,43 @@
 
             .mini {
                 padding: 0 0.8rem;
+            }
+        }
+
+        // OUR SERVICES
+        .our-services {
+            padding: 2rem 64px;
+            @include flex(flex-start, space-between, row);
+
+            .info {
+                width: 60%;
+                padding-right: 2rem;
+
+                .title {
+                    font-size: 5rem;
+                }
+
+                .services {
+                    @include grid(2, 1fr, 40px);
+
+                    .service {
+                        padding: 0.5rem 0;
+                        height: 180px;
+
+                        h3 {
+                            font-size: 1.5rem;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .img {
+                height: 648px;
+                width: 40%;
             }
         }
 
@@ -216,7 +323,7 @@
                         font-size: 1.2rem;
                     }
 
-                    .btn {
+                    .circular-btn-with-label {
                         margin-top: 8rem;
 
                         .icon {

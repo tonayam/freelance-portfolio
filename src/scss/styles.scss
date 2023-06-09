@@ -206,3 +206,27 @@ input:-webkit-autofill:active {
         font-size: 16px;
     }
 }
+
+
+// CIRCULAR BUTTON WITH ARROW AND LABEL ALONG SIDE IT
+.circular-btn-with-label {
+    margin-top: 1rem;
+    @include flex(center, flex-start, row);
+    display: inline-flex;
+    cursor: pointer;
+
+    .icon {
+        background-color: #111;
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        margin-right: 1rem;
+        color: #fff;
+        @include flex(center, center, row);
+        font-size: 1rem;
+    }
+
+    span {
+        font-size: 0.9rem;
+    }
+}
