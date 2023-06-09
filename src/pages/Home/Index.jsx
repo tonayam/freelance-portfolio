@@ -21,7 +21,35 @@ const Home = () => {
         </div>
       </header>
 
-      {/* FIRST SECTION */}
+      {/* HERO SECTION */}
+      <section className='hero'>
+        <div className='info'>
+          <h1>UNLEASHING YOUR BRAND'S POTENTIAL</h1>
+          <p>
+            Comprehensive branding solutions that help fashion, lifestyle, and
+            luxury brands connect with their target audience.
+          </p>
+          <div className='offers'>
+            <div className='offer'>
+              <span>01</span>
+              <span>BRANDING</span>
+            </div>
+            <div className='offer'>
+              <span>02</span>
+              <span>CAMPAIGNS</span>
+            </div>
+            <div className='offer'>
+              <span>03</span>
+              <span>E-COMMERCE</span>
+            </div>
+            <div className='offer'>
+              <span>04</span>
+              <span>SOCIAL MEDIA</span>
+            </div>
+          </div>
+        </div>
+        <div className='img'></div>
+      </section>
       {/* FIRST SECTION */}
 
       {/* OUR SERVICES SECTION */}
