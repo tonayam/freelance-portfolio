@@ -328,6 +328,7 @@
         .hero {
             padding: 2rem 64px;
             @include flex(flex-start, space-between, row);
+            margin-bottom: 4rem;
 
             .info {
                 width: 50%;
