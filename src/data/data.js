@@ -1,3 +1,6 @@
+import electricBikes from '../assets/electric-bikes.png';
+import deverence from '../assets/deverence.png';
+
 // OUR SERVICES
 const ourServices = [
   {
@@ -26,4 +29,23 @@ const ourServices = [
   },
 ];
 
-export { ourServices };
+// PROJECTS
+const projects = [
+  {
+    projectName: `ELECTRIC BIKES LAGOS`,
+    projectDesc: `A Nigerian based e-commerce store that sells electric bikes`,
+    projectLink: `https://www.electricbikeslagos.com/`,
+    projectImage: electricBikes,
+    projectClass: ``,
+  },
+
+  {
+    projectName: `DEVERENCE`,
+    projectDesc: `Portfolio project for a fullstack web developer based in Nigeria`,
+    projectLink: `https://deverence.xyz/`,
+    projectImage: deverence,
+    projectClass: `inverted`,
+  },
+];
+
+export { ourServices, projects };

@@ -5,7 +5,7 @@ import quantumOffice from '../../assets/quantum-office.png';
 import selectedWork from '../../assets/selected-work.png';
 import { BsArrowUpRight } from 'react-icons/bs';
 import electricBikes from '../../assets/electric-bikes.png';
-import { ourServices } from '../../data/data';
+import { ourServices, projects } from '../../data/data';
 
 const Home = () => {
   return (
@@ -89,50 +89,39 @@ const Home = () => {
         </div>
 
         {/* PROJECT */}
-        <div className='project'>
-          <div className='imgs'>
-            <div className='img'>
-              <img src={electricBikes} alt='electric bikes' />
-            </div>
-          </div>
-          <div className='info'>
-            <h2>ELECTRIC BIKES LAGOS</h2>
-            <p>A Nigerian based e-commerce store that sells electric bikes</p>
-            <div className='circular-btn-with-label'>
-              <a
-                href='https://www.electricbikeslagos.com/'
-                target='_blank'
-                rel='noreferrer'
-                className='icon'
-              >
-                <BsArrowUpRight />
-              </a>
-              <span>Visit Project</span>
-            </div>
-          </div>
-        </div>
-
-        {/* PROJECT */}
-        <div className='project inverted'>
-          <div className='imgs'>
-            <div className='img'>
-              <img src={electricBikes} alt='electric bikes homepage' />
-            </div>
-          </div>
-          <div className='info'>
-            <h2>AZURE</h2>
-            <p>
-              Website Redesign: Improving user experience and modernizing
-              design.
-            </p>
-            <div className='circular-btn-with-label'>
-              <div className='icon'>
-                <BsArrowUpRight />
+        {projects.map((project, projectIndex) => {
+          const {
+            projectClass,
+            projectDesc,
+            projectImage,
+            projectLink,
+            projectName,
+          } = project;
+          return (
+            <div className={`project ${projectClass}`} key={projectIndex}>
+              <div className='imgs'>
+                <div className='img'>
+                  <img src={projectImage} alt={projectName} />
+                </div>
               </div>
-              <span>Visit Project</span>
+              <div className='info'>
+                <h2>{projectName}</h2>
+                <p>{projectDesc}</p>
+                <div className='circular-btn-with-label'>
+                  <a
+                    href={projectLink}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='icon'
+                  >
+                    <BsArrowUpRight />
+                  </a>
+                  <span>Visit Project</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          );
+        })}
       </section>
       <Footer />
     </main>
