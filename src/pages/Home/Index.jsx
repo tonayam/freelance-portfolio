@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import quantumOffice from '../../assets/quantum-office.png';
 import selectedWork from '../../assets/selected-work.png';
 import { BsArrowUpRight } from 'react-icons/bs';
-import electricBikes from '../../assets/electric-bikes.png';
 import { ourServices, projects } from '../../data/data';
+import { gsap } from 'gsap';
 
 const Home = () => {
+  const tl = gsap.timeline();
+  const headerRef = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      tl.fromTo(`.img`, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0 }).fromTo(
+        `.mini span`,
+        1,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0 }
+      );
+    }, headerRef);
+    return () => ctx.revert();
+
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <main className='home-page'>
       <Navbar />
       {/* HEADER */}
-      <header>
+      <header ref={headerRef}>
         <div className='img'>
           <img src={quantumOffice} alt='Quantum Office' />
         </div>

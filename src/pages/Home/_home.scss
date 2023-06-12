@@ -318,6 +318,15 @@
         // HEADER
         header {
             padding: 2rem 64px;
+            overflow: hidden;
+
+            .img {
+                overflow: hidden;
+
+                img {
+                    opacity: 1;
+                }
+            }
 
             .mini {
                 padding: 0 0.8rem;
