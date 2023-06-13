@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import quantumOffice from '../../assets/quantum-office.png';
@@ -6,6 +6,7 @@ import selectedWork from '../../assets/selected-work.png';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { ourServices, projects } from '../../data/data';
 import { gsap } from 'gsap';
+import heroVid from '../../assets/hero-video.mp4';
 
 const Home = () => {
   const tl = gsap.timeline();
@@ -25,6 +26,20 @@ const Home = () => {
     // eslint-disable-next-line
   }, []);
 
+  // HANDLE AUTO REPEAT VIDEO
+  const videoRef = useRef(null);
+  useEffect(() => {
+    const handleVideoEnded = () => {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+    };
+    videoRef.current.addEventListener('ended', handleVideoEnded);
+    return () => {
+      // eslint-disable-next-line
+      videoRef.current.removeEventListener('ended', handleVideoEnded);
+    };
+  }, []);
+
   return (
     <main className='home-page'>
       <Navbar />
@@ -41,8 +56,10 @@ const Home = () => {
       {/* HERO SECTION */}
       <section className='hero'>
         <div className='info'>
-          <h1>UNLEASHING YOUR BRAND'S POTENTIAL</h1>
-          <p>
+          <h1 data-splitting='heading' className='ofh'>
+            UNLEASHING YOUR BRAND'S POTENTIAL
+          </h1>
+          <p data-splitting='paragraph'>
             Comprehensive branding solutions that help fashion, lifestyle, and
             luxury brands connect with their target audience.
           </p>
@@ -65,14 +82,24 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='img'></div>
+        <div className='vid'>
+          <video
+            ref={videoRef}
+            src={heroVid}
+            autoPlay
+            controls={false}
+            muted
+          ></video>
+        </div>
       </section>
       {/* FIRST SECTION */}
 
       {/* OUR SERVICES SECTION */}
       <section className='our-services'>
         <div className='info'>
-          <h2 className='title'>OUR SERVICES</h2>
+          <h2 className='title' data-splitting='heading'>
+            OUR SERVICES
+          </h2>
           <div className='services'>
             {ourServices.map((service, serviceIndex) => {
               const { btnLabel, info, link, title } = service;
@@ -122,7 +149,7 @@ const Home = () => {
                 </div>
               </div>
               <div className='info'>
-                <h2>{projectName}</h2>
+                <h2 data-splitting='heading'>{projectName}</h2>
                 <p>{projectDesc}</p>
                 <div className='circular-btn-with-label'>
                   <a

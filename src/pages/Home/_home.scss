@@ -51,11 +51,25 @@
             }
         }
 
-        .img {
+        .vid {
             width: 100%;
             height: 255px;
-            border: 2px solid green;
             margin-bottom: 1rem;
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                align-self: center;
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+                transition: 0.2s linear all;
+
+                &:hover {
+                    -webkit-filter: grayscale(0);
+                    filter: grayscale(0);
+                }
+            }
         }
     }
 
@@ -136,7 +150,6 @@
                 .img {
                     img {
                         object-fit: fill;
-
                         -webkit-filter: grayscale(100%);
                         filter: grayscale(100%);
                         transition: 0.2s linear all;
@@ -227,7 +240,7 @@
                 }
             }
 
-            .img {
+            .vid {
                 width: 100%;
                 height: 672px;
             }
@@ -358,7 +371,7 @@
                 }
             }
 
-            .img {
+            .vid {
                 width: 50%;
                 height: 805px;
                 margin-bottom: 0;
