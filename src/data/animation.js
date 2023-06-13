@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import Splitting from 'splitting';
 
-const godsEye = (item, options) => {
+export const godsEye = (item, options) => {
   return new Promise((reslove) => {
     const observer = new window.IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -41,17 +41,6 @@ const split = () => {
         ease: 'easeOut',
       });
     });
-  });
-
-  //   PARAGRAPHS
-  const paragraphs = document.querySelectorAll(`[data-splitting="paragraph"]`);
-
-  paragraphs.forEach((paragraph) => {
-    const lines = Splitting({
-      target: paragraph,
-      by: `lines`,
-    });
-    console.log(lines[0].lines);
   });
 };
 

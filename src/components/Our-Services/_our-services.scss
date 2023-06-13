@@ -1,0 +1,132 @@
+.our-services {
+    margin-bottom: 3rem;
+    padding: 2rem 14px;
+    @include flex(flex-start, space-between, column);
+
+    .info {
+        width: 100%;
+
+        .title {
+            font-size: 2.2rem;
+            width: 70%;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        .services {
+            @include grid(1, 1fr, 20px);
+
+            .service {
+                border-top: 1px solid #7c7979;
+                padding: 0.5rem 0;
+                position: relative;
+                height: 170px;
+                margin-bottom: 2rem;
+
+                h3 {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    margin-bottom: 0.2rem;
+                }
+
+                p {
+                    color: rgba(17, 17, 17, .5);
+                    font-size: 0.9rem;
+                    margin-bottom: 0.5rem;
+                    line-height: 26px;
+                }
+
+                .circular-btn-with-label {
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+
+    }
+
+    .img {
+        border: 2px solid green;
+        height: 255px;
+        width: 100%;
+    }
+
+}
+
+@include for-phone-only {
+    .our-services {
+        padding: 2rem 24px;
+    }
+}
+
+@include for-tablet-potrait-up {
+    .our-services {
+        margin-bottom: 3rem;
+        padding: 2rem 48px;
+        @include flex(flex-start, space-between, column);
+
+        .info {
+            width: 100%;
+
+            .title {
+                font-size: 3.2rem;
+                width: 100%;
+            }
+
+            .services {
+                @include grid(2, 1fr, 40px);
+
+                .service {
+                    padding: 1rem 0;
+                }
+            }
+        }
+
+        .img {
+            height: 672px;
+            width: 100%;
+        }
+    }
+}
+
+@include for-tablet-landscape-up {}
+
+@include for-desktop-up {
+    .our-services {
+        padding: 2rem 64px;
+        @include flex(flex-start, space-between, row);
+
+        .info {
+            width: 60%;
+            padding-right: 2rem;
+
+            .title {
+                font-size: 5rem;
+            }
+
+            .services {
+                @include grid(2, 1fr, 40px);
+
+                .service {
+                    padding: 0.5rem 0;
+                    height: 180px;
+
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .img {
+            height: 648px;
+            width: 40%;
+        }
+    }
+}
+
+@include for-big-desktop-up {}

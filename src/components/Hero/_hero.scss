@@ -1,0 +1,123 @@
+.hero {
+    padding: 2rem 14px;
+    @include flex(flex-start, space-between, column-reverse);
+
+    .info {
+        width: 100%;
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: rgba(17, 17, 17, .8);
+            font-size: 1rem;
+            line-height: 28px;
+            margin-bottom: 2rem;
+        }
+
+        .offers {
+            .offer {
+                @include flex(center, space-between, row);
+                border-bottom: 1px solid #7c7979;
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin-bottom: 1rem;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+    .vid {
+        width: 100%;
+        height: 255px;
+        margin-bottom: 1rem;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            align-self: center;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            transition: 0.2s linear all;
+
+            &:hover {
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+
+@include for-phone-only {
+    .hero {
+        padding: 2rem 24px;
+    }
+}
+
+@include for-tablet-potrait-up {
+    .hero {
+        padding: 2rem 48px;
+
+        .info {
+            h1 {
+                font-size: 4rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .offers {
+                .offer {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .vid {
+            width: 100%;
+            height: 672px;
+        }
+    }
+}
+
+@include for-tablet-landscape-up {}
+
+@include for-desktop-up {
+    .hero {
+        padding: 2rem 64px;
+        @include flex(flex-start, space-between, row);
+        margin-bottom: 4rem;
+
+        .info {
+            width: 50%;
+            padding-right: 2rem;
+
+            h1 {
+                font-size: 5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .offers {
+                .offer {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .vid {
+            width: 50%;
+            height: 805px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include for-big-desktop-up {}
