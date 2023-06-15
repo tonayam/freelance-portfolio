@@ -21,6 +21,7 @@ const Footer = () => {
       opacity:1,
       xPercent:0,
       duration:1,
+      delay:0.5,
       scrollTrigger: {
         trigger: child,
         start: 'top 95%',
