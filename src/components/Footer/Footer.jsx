@@ -14,22 +14,18 @@ const Footer = () => {
   const bottomRef=useRef(null)
   useEffect(() => {
     const bottom = document.querySelector('.bottom')
-    let dynamic = 1
+    let dynamic = 0.5
     gsap.utils.toArray('.item').forEach((child) => {
-      console.log(child)
       dynamic += 0.3;
     gsap.fromTo(child, {
       opacity: 0,
-      stagger:1,
       xPercent: -22,
     },{
       opacity:1,
-      stagger:1,
       xPercent:0,
       duration:1,
       delay:dynamic,
       scrollTrigger: {
-        stagger:1,
         trigger: bottom,
         start: 'top 70%',
       },
