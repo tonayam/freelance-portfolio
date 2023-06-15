@@ -28,6 +28,7 @@ const Footer = () => {
         markers:true,
       },
     });})
+    ScrollTrigger.refresh()
     }, []);
 
   return (
