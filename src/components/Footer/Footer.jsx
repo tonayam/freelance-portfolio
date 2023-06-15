@@ -25,6 +25,7 @@ const Footer = () => {
       scrollTrigger: {
         trigger: child,
         start: 'top 95%',
+        markers:true,
       },
     });})
     }, []);
