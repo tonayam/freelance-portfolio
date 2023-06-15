@@ -16,7 +16,7 @@ const Footer = () => {
     gsap.utils.toArray('.item').forEach((child) => {
     gsap.fromTo(child, {
       opacity: 0,
-      xPercent: -20,
+      xPercent: -22,
     },{
       opacity:1,
       xPercent:0,
