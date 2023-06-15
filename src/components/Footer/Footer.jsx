@@ -13,19 +13,25 @@ gsap.registerPlugin(ScrollTrigger)
 const Footer = () => {
   const bottomRef=useRef(null)
   useEffect(() => {
+    const bottom = document.querySelector('.bottom')
+    let dynamic = 1
     gsap.utils.toArray('.item').forEach((child) => {
+      console.log(child)
+      dynamic += 0.3;
     gsap.fromTo(child, {
       opacity: 0,
+      stagger:1,
       xPercent: -22,
     },{
       opacity:1,
+      stagger:1,
       xPercent:0,
       duration:1,
-      delay:0.5,
+      delay:dynamic,
       scrollTrigger: {
-        trigger: child,
-        start: 'top 95%',
-        markers:true,
+        stagger:1,
+        trigger: bottom,
+        start: 'top 70%',
       },
     });})
     ScrollTrigger.refresh()
