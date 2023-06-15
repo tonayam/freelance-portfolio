@@ -12,60 +12,20 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Footer = () => {
   const bottomRef=useRef(null)
-  const bottom = bottomRef.current
   useEffect(() => {
-  const twitter = document.querySelector('.twitter')
-  const insta = document.querySelector('.insta')
-  const behance = document.querySelector('.behance')
-  const bottomDom = document.querySelector('.bottom')
-        gsap.fromTo(insta, {
-            opacity: 0,
-            xPercent:-20,
-            skewX:"10deg",
-        },
-            {
-                opacity: 1,
-                xPercent:0,
-                delay:1,
-                skewX:"0",
-                duration: 1,
-                scrollTrigger:{
-                  trigger:bottom||bottomDom,
-                  start:"top 80%",
-                }
-            })
-        gsap.fromTo(twitter, {
-            opacity: 0,
-            xPercent:-20,
-            skewX:"10deg",
-        },
-            {
-                opacity: 1,
-                xPercent:0,
-                delay:1.2,
-                skewX:"0",
-                duration: 1,
-                scrollTrigger:{
-                  trigger:bottom||bottomDom,
-                  start:"top 80%",
-                }
-            })
-        gsap.fromTo(behance, {
-            opacity: 0,
-            xPercent:-20,
-            skewX:"10deg",
-        },
-            {
-                opacity: 1,
-                xPercent:0,
-                delay:1.4,
-                skewX:"0",
-                duration: 1,
-                scrollTrigger:{
-                  trigger:bottom||bottomDom,
-                  start:"top 80%",
-                }
-            })
+    gsap.utils.toArray('.item').forEach((child) => {
+    gsap.fromTo(child, {
+      opacity: 0,
+      xPercent: -20,
+    },{
+      opacity:1,
+      xPercent:0,
+      duration:1,
+      scrollTrigger: {
+        trigger: child,
+        start: 'top 95%',
+      },
+    });})
     }, []);
 
   return (
