@@ -20,31 +20,37 @@ const Hero = () => {
   }, []);
 
   // ANIMATIONS
+  const offersRef = useRef();
   const tl = gsap.timeline({
     defaults: {
       ease: `none`,
-    },
-    scrollTrigger: {
-      trigger: `.offers`,
-      start: `top 70%`,
-      markers: true,
     },
   });
 
   useEffect(() => {
     gsap.utils.toArray(`.num`).forEach((num) => {
-      tl.fromTo(
-        num,
-        { xPercent: -100, opacity: 0 },
-        { xPercent: 0, opacity: 1 },
-        0
-      );
+      gsap.set(num, { xPercent: -100, opacity: 0 });
+      gsap.to(num, {
+        xPercent: 0,
+        opacity: 1,
+        delay: 1,
+        scrollTrigger: {
+          trigger: offersRef.current,
+        },
+      });
     });
     gsap.utils.toArray(`.type`).forEach((type) => {
-      tl.fromTo(
+      gsap.set(type, { xPercent: 100, opacity: 0 });
+      gsap.to(
         type,
-        { xPercent: 100, opacity: 0 },
-        { xPercent: 0, opacity: 1 },
+        {
+          xPercent: 0,
+          opacity: 1,
+          delay: 1,
+          scrollTrigger: {
+            trigger: offersRef.current,
+          },
+        },
         0
       );
     });
