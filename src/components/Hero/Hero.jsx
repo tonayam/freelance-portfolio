@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import heroVid from '../../assets/hero-video.mp4';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   // HANDLE REPLAY
@@ -15,6 +18,39 @@ const Hero = () => {
       videoRef.current.removeEventListener('ended', handleVideoEnded);
     };
   }, []);
+
+  // ANIMATIONS
+  const tl = gsap.timeline({
+    defaults: {
+      ease: `none`,
+    },
+    scrollTrigger: {
+      trigger: `.offers`,
+      start: `top 70%`,
+      markers: true,
+    },
+  });
+
+  useEffect(() => {
+    gsap.utils.toArray(`.num`).forEach((num) => {
+      tl.fromTo(
+        num,
+        { xPercent: -100, opacity: 0 },
+        { xPercent: 0, opacity: 1 },
+        0
+      );
+    });
+    gsap.utils.toArray(`.type`).forEach((type) => {
+      tl.fromTo(
+        type,
+        { xPercent: 100, opacity: 0 },
+        { xPercent: 0, opacity: 1 },
+        0
+      );
+    });
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <section className='hero'>
       <div className='info'>
@@ -24,21 +60,21 @@ const Hero = () => {
           luxury brands connect with their target audience.
         </p>
         <div className='offers'>
-          <div className='offer'>
-            <span>01</span>
-            <span>BRANDING</span>
+          <div className='offer ofh'>
+            <span className='num'>01</span>
+            <span className='type'>BRANDING</span>
           </div>
-          <div className='offer'>
-            <span>02</span>
-            <span>CAMPAIGNS</span>
+          <div className='offer ofh'>
+            <span className='num'>02</span>
+            <span className='type'>CAMPAIGNS</span>
           </div>
-          <div className='offer'>
-            <span>03</span>
-            <span>E-COMMERCE</span>
+          <div className='offer ofh'>
+            <span className='num'>03</span>
+            <span className='type'>E-COMMERCE</span>
           </div>
-          <div className='offer'>
-            <span>04</span>
-            <span>SOCIAL MEDIA</span>
+          <div className='offer ofh'>
+            <span className='num'>04</span>
+            <span className='type'>SOCIAL MEDIA</span>
           </div>
         </div>
       </div>

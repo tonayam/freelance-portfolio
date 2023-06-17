@@ -1,37 +1,40 @@
-import React, {useEffect,useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { FaInstagram, FaBehance } from 'react-icons/fa';
 import { FiTwitter } from 'react-icons/fi';
 import letsCreate from '../../assets/lets-create.png';
 
-import { gsap } from 'gsap'
+import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger)
-
-
+gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
-  const bottomRef=useRef(null)
+  const bottomRef = useRef(null);
   useEffect(() => {
-    const bottom = document.querySelector('.bottom')
-    let dynamic = 0.5
+    const bottom = document.querySelector('.bottom');
+    let dynamic = 0.5;
     gsap.utils.toArray('.item').forEach((child) => {
       dynamic += 0.3;
-    gsap.fromTo(child, {
-      opacity: 0,
-      xPercent: -22,
-    },{
-      opacity:1,
-      xPercent:0,
-      duration:1,
-      delay:dynamic,
-      scrollTrigger: {
-        trigger: bottom,
-        start: 'top 70%',
-      },
-    });})
-    ScrollTrigger.refresh()
-    }, []);
+      gsap.fromTo(
+        child,
+        {
+          opacity: 0,
+          xPercent: -22,
+        },
+        {
+          opacity: 1,
+          xPercent: 0,
+          duration: 1,
+          delay: dynamic,
+          scrollTrigger: {
+            trigger: bottom,
+            start: 'top 70%',
+          },
+        }
+      );
+    });
+    ScrollTrigger.refresh();
+  }, []);
 
   return (
     <footer className='footer'>
