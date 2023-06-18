@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import heroVid from '../../assets/hero-video.mp4';
+// import heroVid from '../../assets/hero-video.mp4';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -21,11 +21,6 @@ const Hero = () => {
 
   // ANIMATIONS
   const offersRef = useRef();
-  const tl = gsap.timeline({
-    defaults: {
-      ease: `none`,
-    },
-  });
 
   useEffect(() => {
     gsap.utils.toArray(`.num`).forEach((num) => {
@@ -33,7 +28,7 @@ const Hero = () => {
       gsap.to(num, {
         xPercent: 0,
         opacity: 1,
-        delay: 1,
+        delay: 0.5,
         scrollTrigger: {
           trigger: offersRef.current,
         },
@@ -46,7 +41,7 @@ const Hero = () => {
         {
           xPercent: 0,
           opacity: 1,
-          delay: 1,
+          delay: 0.5,
           scrollTrigger: {
             trigger: offersRef.current,
           },
@@ -87,7 +82,7 @@ const Hero = () => {
       <div className='vid'>
         <video
           ref={videoRef}
-          src={heroVid}
+          src='https://res.cloudinary.com/drloy94uw/video/upload/ac_none,q_auto:best/v1687076163/hero-video_albvqp.webm'
           autoPlay={true}
           controls={false}
           muted={true}
