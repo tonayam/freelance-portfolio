@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-// import heroVid from '../../assets/hero-video.mp4';
+import heroVid from '../../assets/hero-vid.webm';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -82,7 +82,7 @@ const Hero = () => {
       <div className='vid'>
         <video
           ref={videoRef}
-          src='https://res.cloudinary.com/drloy94uw/video/upload/ac_none,q_auto:best/v1687076163/hero-video_albvqp.webm'
+          src={heroVid}
           autoPlay={true}
           controls={false}
           muted={true}
