@@ -1,16 +1,31 @@
 .custom-cursor {
-    cursor: pointer;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    will-change: transform;
-    transform: translate(-50%, -50%);
-    // background: linear-gradient(to right, rgba(242, 112, 156, 1), rgba(255, 148, 114, 1));
-    background-color: #fff;
-    pointer-events: none;
-    mix-blend-mode: exclusion;
+    display: none;
 }
+
+
+@include for-phone-only {}
+
+@include for-tablet-potrait-up {}
+
+@include for-tablet-landscape-up {}
+
+@include for-desktop-up {
+    .custom-cursor {
+        display: flex;
+        cursor: pointer;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        will-change: transform;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        pointer-events: none;
+        mix-blend-mode: exclusion;
+    }
+}
+
+@include for-big-desktop-up {}
