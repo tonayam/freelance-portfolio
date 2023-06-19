@@ -138,6 +138,14 @@
 
         img {
             display: flex;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            transition: 0.2s linear all;
+
+            &:hover {
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+            }
         }
     }
 }

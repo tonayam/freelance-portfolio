@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import heroVid from '../../assets/hero-vid.webm';
+import heroImg from '../../assets/hero-img.jpg';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -87,7 +88,7 @@ const Hero = () => {
           controls={false}
           muted={true}
         ></video>
-        <img src='' alt='' />
+        <img src={heroImg} alt='' />
       </div>
     </section>
   );
