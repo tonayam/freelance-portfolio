@@ -16,7 +16,7 @@ const Home = () => {
       {/* HEADER */}
       <header>
         <div className='img'>
-          <img src={agencyName} alt='Quantum Office' />
+          <img src={agencyName} alt='ESTUDIO BRILLANTE' />
         </div>
         <div className='mini'>
           <span>WEB DEVELOPMENT AGENCY</span>

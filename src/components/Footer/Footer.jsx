@@ -44,7 +44,8 @@ const Footer = () => {
         </div>
         <h2>UNLEASHING THE POTENTIAL OF YOUR BRAND</h2>
         <button className='white'>
-          GET IN TOUCH <BsArrowUpRight />
+          <a href='mailto:estudiobrilliante@gmail.com'>GET IN TOUCH</a>{' '}
+          <BsArrowUpRight />
         </button>
       </div>
 

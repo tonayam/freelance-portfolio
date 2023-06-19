@@ -18,7 +18,9 @@ const Navbar = () => {
             <a href='#hero'>About</a>
           </li>
         </ul>
-        <button className='black'>Let's create</button>
+        <button className='black'>
+          <a href='mailto:estudiobrilliante@gmail.com'>Let's create</a>
+        </button>
       </div>
       <div className='hamburger' onClick={() => setShowNav(!showNav)}>
         <span className={showNav ? `clicked` : null}></span>
