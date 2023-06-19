@@ -1,6 +1,7 @@
 import React from 'react';
 import { ourServices } from '../../data/data';
 import { BsArrowUpRight } from 'react-icons/bs';
+import servicesImg from '../../assets/services-img.jpg';
 
 const OurServices = () => {
   return (
@@ -32,7 +33,9 @@ const OurServices = () => {
           })}
         </div>
       </div>
-      <div className='img'></div>
+      <div className='img'>
+        <img src={servicesImg} alt='javascript code' />
+      </div>
     </section>
   );
 };
