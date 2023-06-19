@@ -8,6 +8,7 @@
 @import "../components/Selected-works/selected-works";
 @import "../components/Our-Services/our-services";
 @import "../components/Hero/hero";
+@import "../components/Custom-cursor/custom-cursor";
 
 // PAGES
 @import "../pages/Home/home";
@@ -25,6 +26,7 @@ body {
     font-family: 'Roboto Mono', sans-serif;
     font-weight: 400;
     scroll-behavior: smooth;
+    // cursor: none;
 }
 
 section {
