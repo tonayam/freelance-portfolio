@@ -4,7 +4,7 @@ import { BsArrowUpRight } from 'react-icons/bs';
 
 const OurServices = () => {
   return (
-    <section className='our-services'>
+    <section className='our-services' id='our-services'>
       <div className='info'>
         <h2 className='title' data-splitting='heading'>
           OUR SERVICES

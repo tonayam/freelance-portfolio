@@ -53,7 +53,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className='hero'>
+    <section className='hero' id='hero'>
       <div className='info'>
         <h1 data-splitting='heading'>UNLEASHING YOUR BRAND'S POTENTIAL</h1>
         <p data-splitting='paragraph'>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-import quantumOffice from '../../assets/quantum-office.png';
+import agencyName from '../../assets/agency-name.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SelectedWorks from '../../components/Selected-works/SelectedWorks';
@@ -16,7 +16,7 @@ const Home = () => {
       {/* HEADER */}
       <header>
         <div className='img'>
-          <img src={quantumOffice} alt='Quantum Office' />
+          <img src={agencyName} alt='Quantum Office' />
         </div>
         <div className='mini'>
           <span>WEB DEVELOPMENT AGENCY</span>

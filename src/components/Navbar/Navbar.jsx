@@ -8,9 +8,15 @@ const Navbar = () => {
       <div className='logo'></div>
       <div className={`links ${showNav ? `show` : null}`}>
         <ul>
-          <li>Work</li>
-          <li>Services</li>
-          <li>About</li>
+          <li onClick={() => setShowNav(false)}>
+            <a href='#selected-work'>Work</a>
+          </li>
+          <li onClick={() => setShowNav(false)}>
+            <a href='#our-services'>Services</a>
+          </li>
+          <li onClick={() => setShowNav(false)}>
+            <a href='#hero'>About</a>
+          </li>
         </ul>
         <button className='black'>Let's create</button>
       </div>

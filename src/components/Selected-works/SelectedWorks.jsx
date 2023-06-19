@@ -25,7 +25,7 @@ const SelectedWorks = () => {
   }, []);
 
   return (
-    <section className='selected-work'>
+    <section className='selected-work' id='selected-work'>
       <div className='title'>
         <img src={selectedWork} alt='SELECTED WORK' />
       </div>

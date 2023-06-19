@@ -1,5 +1,7 @@
 import electricBikes from '../assets/electric-bikes.png';
 import deverence from '../assets/deverence.png';
+import flo from '../assets/flo.png';
+import olaIOS from '../assets/ola-ios.png';
 
 // OUR SERVICES
 const ourServices = [
@@ -44,6 +46,21 @@ const projects = [
     projectDesc: `Portfolio project for a fullstack web developer based in Nigeria`,
     projectLink: `https://deverence.xyz/`,
     projectImage: deverence,
+    projectClass: `inverted`,
+  },
+
+  {
+    projectName: `FLO`,
+    projectDesc: `Portfolio project for a product designer`,
+    projectLink: `https://newflo.netlify.app/`,
+    projectImage: flo,
+    projectClass: ``,
+  },
+  {
+    projectName: `OLA-IOS`,
+    projectDesc: `Portfolio project for a mobile app developer`,
+    projectLink: `https://olaios.netlify.app/`,
+    projectImage: olaIOS,
     projectClass: `inverted`,
   },
 ];
