@@ -129,23 +129,26 @@
 
 /* CSS for iOS devices */
 @supports (-webkit-touch-callout: none) {
-    .vid {
-        border: 2px solid red;
+    .hero {
+        .vid {
+            border: 2px solid red;
 
-        video {
-            display: none;
-        }
+            video {
+                display: none;
+            }
 
-        img {
-            display: flex;
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-            transition: 0.2s linear all;
+            img {
+                display: flex;
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+                transition: 0.2s linear all;
 
-            &:hover {
-                -webkit-filter: grayscale(0);
-                filter: grayscale(0);
+                &:hover {
+                    -webkit-filter: grayscale(0);
+                    filter: grayscale(0);
+                }
             }
         }
     }
+
 }
