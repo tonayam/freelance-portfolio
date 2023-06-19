@@ -87,6 +87,7 @@ const Hero = () => {
           controls={false}
           muted={true}
         ></video>
+        <img src='' alt='' />
       </div>
     </section>
   );
