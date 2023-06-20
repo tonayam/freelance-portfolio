@@ -22,17 +22,18 @@ const CustomCursor = forwardRef((props, ref) => {
       moveCursor(x, y);
     };
 
+    // eslint-disable-next-line
     const handleMouseScroll = (e) => {
       const scrollY = window.scrollY;
       moveCursor(gsap.getProperty(el, 'x'), e.pageY + scrollY);
     };
 
     document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('wheel', handleMouseScroll);
+    // document.addEventListener('wheel', handleMouseScroll);
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('wheel', handleMouseScroll);
+      // document.removeEventListener('wheel', handleMouseScroll);
     };
   }, []);
 
