@@ -3,6 +3,7 @@ import { BsArrowUpRight } from 'react-icons/bs';
 import { FaInstagram, FaBehance } from 'react-icons/fa';
 import { FiTwitter } from 'react-icons/fi';
 import letsCreate from '../../assets/lets-create.png';
+import agencyLogo from '../../assets/agency-logo-white.svg';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -53,7 +54,9 @@ const Footer = () => {
 
       <div ref={bottomRef} className='bottom'>
         <div className='box'>
-          <div className='logo'></div>
+          <div className='logo'>
+            <img src={agencyLogo} alt='agency logo' />
+          </div>
           <div className='socials'>
             <div className='item insta'>
               <div className='icon'>

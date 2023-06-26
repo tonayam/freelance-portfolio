@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import agencyLogo from '../../assets/agency-logo-black.svg';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
     <nav className='navbar'>
-      <div className='logo'></div>
+      <div className='logo'>
+        <img src={agencyLogo} alt='agency logo' />
+      </div>
       <div className={`links ${showNav ? `show` : null}`}>
         <ul>
           <li onClick={() => setShowNav(false)}>
