@@ -43,7 +43,7 @@ const Footer = () => {
         <div className='img'>
           <img src={letsCreate} alt="Let's Create" />
         </div>
-        <h2>UNLEASHING THE POTENTIAL OF YOUR BRAND</h2>
+        <h2>UNLEASH YOUR BRAND'S REACH</h2>
         <button className='white'>
           <a href='mailto:estudiobrilliante@gmail.com'>GET IN TOUCH</a>{' '}
           <BsArrowUpRight />

@@ -23,13 +23,19 @@
 
 html,
 body {
-    font-family: 'Roboto Mono', sans-serif;
+    // font-family: 'Roboto Mono', sans-serif;
+    font-family: poppins, sans-serif;
     font-weight: 400;
     scroll-behavior: smooth;
     overflow-x: hidden;
     // cursor: none;
 }
-
+h1>span{
+    color: #F03E3D;
+    text-decoration: underline;
+    text-decoration-line: line-through;
+    // font-family: aboreto, cursive;
+}
 section {
     scroll-behavior: smooth;
 }
