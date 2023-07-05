@@ -56,7 +56,7 @@ const Hero = () => {
   return (
     <section className='hero' id='hero'>
       <div className='info'>
-        <h1 data-splitting='heading'>UNLEASHING YOUR BRAND'S POTENTIAL</h1>
+        <h1 data-splitting='heading'>UNLEASH  YOUR BRAND'S <span>POTENTIAL</span> REACH</h1>
         <p data-splitting='paragraph'>
           Comprehensive branding solutions that help fashion, lifestyle, and
           luxury brands connect with their target audience.
